@@ -59,11 +59,12 @@ public class NPCThreatResponse : MonoBehaviour
 
     // ── VR Contact Detection ──────────────────────────────────────
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!IsThreat(other)) return;
-        React();
-    }
+private void OnTriggerEnter(Collider other)
+{
+    Debug.Log($"[NPC] Something entered trigger: {other.name} | tag: {other.tag}");
+    if (!IsThreat(other)) return;
+    React();
+}
 
     // ── Core Logic ────────────────────────────────────────────────
 
